@@ -72,4 +72,4 @@ https://cwe.mitre.org/data/definitions/918.html
 - VulDB may ask for the vendor's response. Supply the PSIRT thread and state that the vendor was
   notified on `<date>` with no fix at submission time.
 - If VulDB assigns, stop. Do not file MITRE afterwards.
-- VulDB entries are public at submission time — confirm the 90-day window has elapsed.
+- VulDB entries are public at submission time — confirm the 7-day window has elapsed.

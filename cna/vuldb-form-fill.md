@@ -1,6 +1,6 @@
 # VulDB — form walkthrough
 
-Only after the 90-day window (see `cna/playbook.md`). VulDB publishes on submission.
+Only after the 7-day window (see `cna/playbook.md`). VulDB publishes on submission.
 
 ## Steps
 

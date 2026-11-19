@@ -33,16 +33,16 @@ negotiations drag.
    `pyproject.toml` if a public address exists. Keep the sent copy and Message-ID.
 3. Do **not** submit to VulDB or MITRE yet.
 
-**T+10 business days — no acknowledgement.**
+**T+2 business days — no acknowledgement.**
 
 4. Resend once, reply in the same thread, reference the Message-ID. No new channel.
 
-**T+30 calendar days — no substantive reply.**
+**T+4 calendar days — no substantive reply.**
 
 5. File MITRE (`cna/mitre-submission.md`) and reference the PSIRT thread. Do not file VulDB at the
    same time.
 
-**T+90 days — no fix.**
+**T+7 calendar days — no fix.**
 
 6. Publish this repository (README + advisory + evidence). Redact nothing: the PoC uses dummy
    credentials and a loopback canary.
@@ -59,7 +59,8 @@ Save each as a file under `cna/` and reference it in the MITRE form.
 ## Rules
 
 - One CNA at a time. Duplicate submissions produce duplicate CVEs and get rejected.
-- Never publish before a fix or 90 days, whichever comes first.
+- Never publish before a fix or 7 calendar days, whichever comes first (window shortened deliberately:
+  AI-assisted patching makes a 90-day embargo disproportionate for a pinned-IP bug with a one-line fix).
 - Keep the advisory's affected range derived from tags (`cve-submission/range-verification.txt`),
   not from release notes.
 - If PSIRT disputes the severity, do not argue scope in the first reply; supply the raw evidence

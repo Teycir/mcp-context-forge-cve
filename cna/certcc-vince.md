@@ -65,7 +65,7 @@ https://cwe.mitre.org/data/definitions/918.html
 ## Coordination
 
 - Vendor notified: `<date>`, PSIRT case `<id>`, Message-ID `<id>`
-- Requested disclosure date: 90 days from notice
+- Requested disclosure date: 7 calendar days from notice
 - Requested CVE: yes (IBM PSIRT preferred; CERT/CC if PSIRT declines or stalls)
 - Attachments: `cve-submission/advisory.md`, `cve-submission/range-verification.txt`,
   `evidence/lab-20261119T124614Z/sha256sums.txt`

@@ -51,8 +51,9 @@ call them. Applying the same pattern closes the rebinding window. Suggested hard
 Full advisory, per-tag range derivation, raw request/response captures and sha256 manifest are
 available on request; I can attach them to this thread or a private advisory.
 
-**Disclosure.** I intend to publish after a fix ships or 90 days from this notice, whichever comes
-first. Please confirm receipt and whether IBM PSIRT will assign a CVE.
+**Disclosure.** I intend to publish 7 calendar days from this notice (2026-11-26) unless a fix ships
+or we agree an extension in this thread. Please confirm receipt and whether IBM PSIRT will
+assign a CVE.
 
 Regards,
 Teycir

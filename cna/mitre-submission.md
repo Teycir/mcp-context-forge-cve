@@ -1,7 +1,7 @@
 # MITRE CVE request — form fields
 
 Submit at `https://cveform.mitre.org/` only after the PSIRT window elapses
-(see `cna/playbook.md`, T+30 days). One request per vulnerability.
+(see `cna/playbook.md`, T+4 days). One request per vulnerability.
 
 ## Request type
 

@@ -20,9 +20,10 @@ Nothing pins the validated IP. A DNS name that answers with a public address dur
 `127.0.0.1` during the transport lookup passes the check and connects to loopback. The response
 lists the internal server's tools; `POST /llmchat/chat` invokes them.
 
-**Affected.** `>=0.9.0, <=1.1.1`, tested at commit
-`85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17). In 0.9.0 the route also lacked an auth
-dependency and any URL validation, so the same path was reachable unauthenticated.
+**Affected.** Primary: `1.0.0-RC2` – `1.1.1` (rebinding SSRF), tested at commit
+`85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17). Secondary, same endpoint, worth separate
+IDs: `0.9.0` had no auth dependency and no URL validation (unauthenticated direct SSRF);
+`1.0.0-BETA-1` – `1.0.0-RC1` had auth but no URL validation (direct SSRF).
 
 **Proof.** Isolated Docker lab, no production systems. With a TTL-0 rebinding name:
 
@@ -32,9 +33,14 @@ POST /llmchat/chat     -> 200, tool_used: true,
                           output: "INTERNAL_ONLY_TOOL_REACHED_7f3a"
 ```
 
+Prerequisite: an admin must have configured an LLM provider/model; the attacker does not need to
+control it. Verified with a real public OpenAI-compatible provider (Variant A): connect returned
+both tools, chat returned the canary, and a write-only internal MCP tool produced
+`WRITE_PROOF_7f3a` in `/tmp/internal_write_proof.txt` inside the gateway's loopback namespace.
+
 Negative controls: direct `http://127.0.0.1:19000/mcp` → 400 `Invalid server URL`; cached public
 answer (TTL 300) → 500, zero internal tool calls; attacker container cannot reach either
-`10.77.0.2:19000` or `127.0.0.1:19000`.
+`10.77.0.2:19000` or `127.0.0.1:19000`; provider `api_base` loopback/private → 422 SSRF block.
 
 **Fix.** The pinning helpers already exist and are used by DCR/A2A/tool services:
 `SecurityValidator.validate_url_for_connection_pinning()` +

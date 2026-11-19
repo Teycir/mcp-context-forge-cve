@@ -32,3 +32,8 @@ Regards,
 Dwight
 IBM PSIRT Operations
 psirt@us.ibm.com
+
+## Reporter position (reply 2026-11-19)
+
+- Agree to 30 days after a public fix, bounded: outer limit 2026-12-19.
+- Licence: "I am not granting rights beyond use of this material to evaluate and remediate the report."

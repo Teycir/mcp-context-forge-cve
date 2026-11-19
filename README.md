@@ -10,14 +10,14 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Package | `mcp-contextforge-gateway` (PyPI) |
 | Source | `github.com/IBM/mcp-context-forge` |
 | Audited | 1.1.1, commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17) |
-| Affected | `>=0.9.0, <=1.1.1` |
+| Affected | `1.0.0-RC2` – `1.1.1` (rebinding); `0.9.0` and `1.0.0-BETA-1` – `1.0.0-RC1` (direct SSRF) |
 | Fixed in | none (as of 2026-11-19) |
 | Severity | High — CVSS 3.1 **8.2** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` |
 | Conservative scoring | 7.1 High with `S:U` if scope change is rejected |
 | CWE | CWE-918 (Server-Side Request Forgery) |
 | CVE | pending — submission pack in `cve-submission/`, `cna/` |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
-| Status | Vendor not yet notified. No fix available. |
+| Status | Vendor notified 2026-11-19T13:49:49Z (IBM PSIRT). No fix. Publish deadline 2026-11-26. |
 
 ## Issue
 
@@ -81,6 +81,14 @@ isolation control    BLOCKED from attacker container to 10.77.0.2:19000 and 127.
    after connect (`getpeername`), not only pre-connect; restrict `llm.invoke` to roles that need it;
    optional host allowlist for `/llmchat/connect`.
 
+## Disclosure status
+
+- Notified: **2026-11-19T13:49:49Z** to `psirt@us.ibm.com` (Proton, text body, no attachments).
+- Message-ID: `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>`
+- Sent copy: `cna/sent/20261119T134949Z-vendor-notice-psirt.eml` (sha256 `4810b310669a7eb33be499ed0ff4e211543d01f2e737d7850c619b200573dde2`)
+- Log: `cna/contact-log.md` row 1.
+- Deadline: **2026-11-26** (7 calendar days). Escalation: T+2 nudge (2026-11-21), T+4 MITRE (2026-11-23), T+7 publish.
+
 ## Evidence
 
 | Path | Contents |
@@ -94,4 +102,9 @@ isolation control    BLOCKED from attacker container to 10.77.0.2:19000 and 127.
 | `evidence/lab-20261119T124614Z/neg2-cached-public-ttl300.json` | Cached public answer rejected |
 | `evidence/lab-20261119T124614Z/isolation-control.txt` | Attacker cannot reach loopback |
 | `pocs/` | Lab: DNS auth+cache, internal MCP, LLM stub, exploit driver |
+| `evidence/lab-20261119T131956Z/` | Exact-tag v1.1.1 rerun (PASS) + `sha256sums.txt` |
+| `evidence/variantA-20261119T132238Z/` | Real public provider, read canary |
+| `evidence/variantA-writeonly-20261119T132736Z/` | Write-only internal tool proof (`WRITE_PROOF_7f3a`) |
+| `cna/sent/20261119T134949Z-vendor-notice-psirt.eml` | Sent vendor notice with headers |
+| `cna/contact-log.md` | Contact ledger (row 1 sent, Message-ID) |
 | `cve-submission/MANIFEST.txt` | sha256 of the submission pack |

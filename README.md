@@ -17,7 +17,7 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | CWE | CWE-918 (Server-Side Request Forgery) |
 | CVE | pending — submission pack in `cve-submission/`, `cna/` |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
-| Status | Vendor notified 2026-11-19T13:49:49Z; PSIRT replied 2026-11-19 directing to HackerOne; declined and GHSA requested same day (repo PVR disabled). No fix. Intended publication 2026-11-26. |
+| Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened, report in review. HackerOne declined. Disclosure: bounded 30-days-after-fix proposed, outer bound 2026-12-19. No fix. |
 
 ## Issue
 

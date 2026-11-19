@@ -1,10 +1,10 @@
 # Contact log
 
-Status as of 2026-11-19: **no channel contacted**. Pack prepared, nothing sent.
+Status as of 2026-11-19T13:49:49Z: **row 1 sent** (Proton, text body, no attachments). No other channel contacted.
 
 | # | Channel | Address / URL | Purpose | Status | Date (UTC) | Message-ID / ticket |
 |---|---|---|---|---|---|---|
-| 1 | IBM PSIRT | psirt@us.ibm.com | Vendor notice + CVE request | not sent | — | — |
+| 1 | IBM PSIRT | psirt@us.ibm.com | Vendor notice + CVE request | sent | 2026-11-19T13:49:49Z | `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>` |
 | 2 | IBM PSIRT (follow-up) | same thread | Nudge at T+2 business days | not sent | — | — |
 | 3 | GitHub private advisory | `IBM/mcp-context-forge` → Security | Courtesy copy to maintainers | not opened | — | — |
 | 4 | MITRE | cveform.mitre.org | CNA of last resort at T+4 days | not sent | — | — |

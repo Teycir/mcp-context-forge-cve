@@ -1,11 +1,12 @@
 # Contact log
 
-Status as of 2026-11-19T13:49:49Z: **row 1 sent** (Proton, text body, no attachments). No other channel contacted.
+Status as of 2026-11-19: row 1 sent; PSIRT replied (row 2) redirecting to HackerOne (row 2a). HackerOne link and reply headers pending from reporter.
 
 | # | Channel | Address / URL | Purpose | Status | Date (UTC) | Message-ID / ticket |
 |---|---|---|---|---|---|---|
 | 1 | IBM PSIRT | psirt@us.ibm.com | Vendor notice + CVE request | sent | 2026-11-19T13:49:49Z | `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>` |
-| 2 | IBM PSIRT (follow-up) | same thread | Nudge at T+2 business days | not sent | — | — |
+| 2 | IBM PSIRT (reply) | psirt@us.ibm.com | Acknowledgement — redirect to HackerOne | replied | 2026-11-19 (exact time pending `.eml`) | reply Message-ID pending |
+| 2a | HackerOne (IBM program) | link from PSIRT reply | Complete submission | not submitted — link pending | — | — |
 | 3 | GitHub private advisory | `IBM/mcp-context-forge` → Security | Courtesy copy to maintainers | not opened | — | — |
 | 4 | MITRE | cveform.mitre.org | CNA of last resort at T+4 days | not sent | — | — |
 | 5 | VulDB | vuldb.com/?submit | Alternative CNA (only if MITRE/PSIRT fail) | not sent | — | — |

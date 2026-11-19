@@ -1,0 +1,7 @@
+# Fix watch — 2026-11-19T18:54:17Z
+PVR: {"enabled":false}
+latest release: v1.1.1 2026-11-10T13:46:57Z
+llmchat_router.py blob: 01d4d503096f6858e11c11b962f1d8bec3c715cb
+pinning refs in llmchat_router.py: 0
+last commit touching file: c691f69a 2026-11-04 (auth scopes, unrelated)
+=> no fix published; nothing to verify.

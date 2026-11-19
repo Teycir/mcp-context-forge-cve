@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-19T13:19:56Z",
+  "neg1_direct_loopback_status": 400,
+  "neg2_cached_public_ttl300_status": 500,
+  "neg2_internal_tool_calls": "0",
+  "poc_connect_status": 200,
+  "poc_connect_tools": [
+    "internal_only_secret_tool_7f3a"
+  ],
+  "poc_chat_status": 200,
+  "poc_canary_seen": true,
+  "canary": "INTERNAL_ONLY_TOOL_REACHED_7f3a",
+  "isolation_control": "10.77.0.2:19000 BLOCKED ConnectionRefusedError: [Errno 111] Connection refused\n127.0.0.1:19000 BLOCKED ConnectionRefusedError: [Errno 111] Connection refused",
+  "log": [
+    "2026-11-19T13:19:01Z login-admin status=200",
+    "2026-11-19T13:19:02Z admin-create-dev status=201",
+    "2026-11-19T13:19:02Z admin-create-team status=201",
+    "2026-11-19T13:19:02Z admin-list-roles status=200",
+    "2026-11-19T13:19:02Z admin-assign-developer status=200",
+    "2026-11-19T13:19:02Z admin-create-provider status=201",
+    "2026-11-19T13:19:10Z admin-create-model status=201",
+    "2026-11-19T13:19:10Z login-dev status=200",
+    "2026-11-19T13:19:10Z neg1-direct-loopback status=400",
+    "2026-11-19T13:19:10Z neg2-cached-public-ttl300 status=500",
+    "2026-11-19T13:19:30Z poc-connect-rebind status=200",
+    "2026-11-19T13:19:38Z poc-chat-tool-invoke status=200"
+  ]
+}

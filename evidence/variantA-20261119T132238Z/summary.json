@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-11-19T13:22:55Z",
+  "provider_api_base": "https://text.pollinations.ai/openai",
+  "model": "openai",
+  "connect_status": 200,
+  "connect_tools": [
+    "internal_only_secret_tool_7f3a",
+    "internal_write_proof_7f3a"
+  ],
+  "chat_read_status": 200,
+  "chat_read_canary": true,
+  "chat_write_status": 200,
+  "chat_write_marker": false,
+  "internal_write_proof": "",
+  "log": [
+    "2026-11-19T13:22:38Z login-admin status=200",
+    "2026-11-19T13:22:38Z admin-create-dev status=409",
+    "2026-11-19T13:22:38Z admin-create-team status=400",
+    "2026-11-19T13:22:38Z admin-list-teams status=200",
+    "2026-11-19T13:22:38Z admin-list-roles status=200",
+    "2026-11-19T13:22:38Z admin-assign-developer status=400",
+    "2026-11-19T13:22:38Z variantA-create-provider status=201",
+    "2026-11-19T13:22:38Z variantA-create-model status=201",
+    "2026-11-19T13:22:38Z login-dev status=200",
+    "2026-11-19T13:22:39Z variantA-connect-rebind status=200",
+    "2026-11-19T13:22:43Z variantA-chat-read status=200",
+    "2026-11-19T13:22:49Z variantA-chat-write status=200"
+  ]
+}

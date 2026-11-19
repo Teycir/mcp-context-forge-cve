@@ -1,0 +1,30 @@
+===== 2026-11-19T13:27:36Z disconnect
+POST http://10.77.0.2:4444/llmchat/disconnect
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwYWIyYjlmNS1hMmMxLTQ1Y2EtOTIwNC05MTkwMDAwNWEyNzEiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ4NTYsImV4cCI6MTc5NTA5NjA1NiwianRpIjoiOGMxODQyODUtYTgwYi00MjJmLWI1MzYtYWE5MjE2MzNiMzE5IiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDg1NiwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.0dupXC9icvYc6diRn2ltYoSf8rGeLUH3uUdxsoXmQso
+
+{"user_id": "dev@example.com"}
+--- status=200
+date: Thu, 19 Nov 2026 13:27:36 GMT
+server: uvicorn
+content-length: 91
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-OknOqXpg6lyJ830KA4TFuw'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 99
+x-correlation-id: 46de07b875124b0f87766ac8d0c96b73
+sunset: Sat, 26 Sep 2026 00:00:00 GMT
+deprecation: true
+link: </v1/llmchat/disconnect>; rel="successor-version"
+x-deprecated-endpoint: This endpoint is deprecated. Use /v1/llmchat/disconnect instead. It will be removed after Sat, 26 Sep 2026 00:00:00 GMT.
+
+{"status":"disconnected","user_id":"dev@example.com","message":"Successfully disconnected"}

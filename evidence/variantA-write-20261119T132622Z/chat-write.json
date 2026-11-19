@@ -1,0 +1,25 @@
+{
+  "user_id": "dev@example.com",
+  "response": "ECHO:INTERNAL_ONLY_TOOL_REACHED_7f3a",
+  "tool_used": true,
+  "tools": [
+    "internal_only_secret_tool_7f3a"
+  ],
+  "tool_invocations": [
+    {
+      "type": "tool_start",
+      "id": "01a1f3fc-b96d-752f-a5ec-dfeb0d730c0d",
+      "tool": "internal_only_secret_tool_7f3a",
+      "input": {},
+      "start": "2026-11-19T13:26:28.461902+00:00"
+    },
+    {
+      "type": "tool_end",
+      "id": "01a1f3fc-b96d-752f-a5ec-dfeb0d730c0d",
+      "tool": "internal_only_secret_tool_7f3a",
+      "output": "INTERNAL_ONLY_TOOL_REACHED_7f3a",
+      "end": "2026-11-19T13:26:30.485306+00:00"
+    }
+  ],
+  "elapsed_ms": 6052
+}

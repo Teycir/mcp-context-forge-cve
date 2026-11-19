@@ -1,0 +1,14 @@
+{
+  "email": "devw@example.com",
+  "full_name": "devw@example.com",
+  "is_admin": false,
+  "is_active": true,
+  "auth_provider": "local",
+  "created_at": "2026-11-19T13:24:34.798358",
+  "last_login": null,
+  "email_verified": true,
+  "password_change_required": false,
+  "failed_login_attempts": 0,
+  "locked_until": null,
+  "is_locked": false
+}

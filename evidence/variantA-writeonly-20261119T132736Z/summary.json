@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-19T13:27:46Z",
+  "provider_api_base": "https://text.pollinations.ai/openai",
+  "model": "openai",
+  "connect_status": 200,
+  "connect_tools": [
+    "internal_write_proof_7f3a"
+  ],
+  "chat_status": 200,
+  "chat_write_marker": true,
+  "internal_write_proof": "WRITE_PROOF_7f3a",
+  "log": [
+    "2026-11-19T13:27:36Z login-admin status=200",
+    "2026-11-19T13:27:36Z login-dev status=200",
+    "2026-11-19T13:27:36Z disconnect status=200",
+    "2026-11-19T13:27:36Z connect-write-only status=200",
+    "2026-11-19T13:27:40Z chat-write-only status=200"
+  ]
+}

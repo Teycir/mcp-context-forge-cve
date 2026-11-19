@@ -1,0 +1,27 @@
+===== 2026-11-19T13:24:34Z list-providers
+GET http://10.77.0.2:4444/v1/llm/providers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjhkZjZjNy04YzA4LTQ0ZjgtYjljZS1kZTdlNTU0Y2Y3MzQiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ2NzQsImV4cCI6MTc5NTA5NTg3NCwianRpIjoiMGMwNWFjOGUtOGI0OC00ZDg5LWFiOGQtYzRlZmFhYjUyZDY1IiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDY3NCwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.g68OzCV29lfcvp2PEjns_1-IJJAV0uziCtziPuGUank
+
+
+--- status=200
+date: Thu, 19 Nov 2026 13:24:34 GMT
+server: uvicorn
+content-length: 444
+content-type: application/json
+vary: Origin, Accept-Encoding, Authorization
+content-encoding: zstd
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-bDG6q0Z3PT7sIeAezWAhlg'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 500
+x-ratelimit-remaining: 495
+x-correlation-id: f26f2478074f44df8dd65c39791200a1
+
+{"providers":[{"id":"f369c3a38f6349efbd4301f4ded52bff","name":"public-openai","slug":"public-openai","description":null,"provider_type":"openai_compatible","api_base":"https://text.pollinations.ai/openai","api_version":null,"config":{},"default_model":"openai","default_temperature":0.7,"default_max_tokens":null,"enabled":true,"health_status":"unknown","last_health_check":null,"plugin_ids":[],"created_at":"2026-11-19T13:22:38.886167","updated_at":"2026-11-19T13:22:38.886168","created_by":"admin@example.com","modified_by":null,"model_count":1},{"id":"1dccbfc0d88b44adbb54bf65a498dbb1","name":"stub","slug":"stub","description":null,"provider_type":"openai_compatible","api_base":"http://rebind.test:8081/v1","api_version":null,"config":{},"default_model":"stub-model","default_temperature":0.7,"default_max_tokens":null,"enabled":true,"health_status":"unknown","last_health_check":null,"plugin_ids":[],"created_at":"2026-11-19T13:19:10.432802","updated_at":"2026-11-19T13:19:10.432809","created_by":"admin@example.com","modified_by":null,"model_count":1}],"total":2,"page":1,"page_size":50}

@@ -1,0 +1,30 @@
+===== 2026-11-19T13:22:39Z variantA-connect-rebind
+POST http://10.77.0.2:4444/llmchat/connect
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwYWIyYjlmNS1hMmMxLTQ1Y2EtOTIwNC05MTkwMDAwNWEyNzEiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ1NTksImV4cCI6MTc5NTA5NTc1OSwianRpIjoiNzUzZWNlN2ItODFlZC00OThhLTg5ODUtN2RhNjhmMDQ2ZjIyIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDU1OSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.DbLlfEZS3CRv9Hyvfnn9TT7CrEjX23lwtB0XHj2uVxc
+
+{"user_id": "dev@example.com", "server": {"url": "http://rebind.test:19000/mcp", "transport": "streamable_http"}, "llm": {"model": "stub-model"}}
+--- status=200
+date: Thu, 19 Nov 2026 13:22:38 GMT
+server: uvicorn
+content-length: 157
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-rqIEI0p1D_lnGkG1ambcnA'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 99
+x-correlation-id: f140bef376f74ad8b9f00a9240923289
+sunset: Sat, 26 Sep 2026 00:00:00 GMT
+deprecation: true
+link: </v1/llmchat/connect>; rel="successor-version"
+x-deprecated-endpoint: This endpoint is deprecated. Use /v1/llmchat/connect instead. It will be removed after Sat, 26 Sep 2026 00:00:00 GMT.
+
+{"status":"connected","user_id":"dev@example.com","provider":"gateway","tool_count":2,"tools":["internal_only_secret_tool_7f3a","internal_write_proof_7f3a"]}

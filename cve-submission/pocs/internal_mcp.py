@@ -33,6 +33,15 @@ def ssrf_proof() -> str:
     return CANARY
 
 
+@mcp.tool(name="internal_write_proof_7f3a")
+def write_proof() -> str:
+    """Write a proof file on the internal host (integrity impact)."""
+    log("TOOL_CALLED internal_write_proof_7f3a")
+    with open("/tmp/internal_write_proof.txt", "w") as f:
+        f.write("WRITE_PROOF_7f3a")
+    return "WROTE_INTERNAL_FILE_7f3a"
+
+
 async def main():
     log("START internal mcp 127.0.0.1:19000")
     await mcp.run_streamable_http_async(

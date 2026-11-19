@@ -1,0 +1,26 @@
+===== 2026-11-19T13:22:31Z admin-create-team
+POST http://10.77.0.2:4444/teams/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjhkZjZjNy04YzA4LTQ0ZjgtYjljZS1kZTdlNTU0Y2Y3MzQiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ1NTEsImV4cCI6MTc5NTA5NTc1MSwianRpIjoiODNjZTE3MzUtZWQ3ZS00ZjU0LTlkYTUtMTFkNmEwNzE5NmI5IiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDU1MSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.j0ucuxQOrHUu1DCGmgYC6Vl4bZAwHI_eZVl5i3UCsEY
+
+{"name": "Lab Team", "description": "lab", "members": [{"email": "dev@example.com", "role": "member"}]}
+--- status=400
+date: Thu, 19 Nov 2026 13:22:30 GMT
+server: uvicorn
+content-length: 51
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-NJYm22R-jKRFa3QYE_vZAQ'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 500
+x-ratelimit-remaining: 497
+x-correlation-id: 4753b8117af948e78d2fe3fd3caa823b
+
+{"detail":"A team named 'Lab Team' already exists"}

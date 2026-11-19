@@ -1,0 +1,9 @@
+{
+  "status": "connected",
+  "user_id": "dev@example.com",
+  "provider": "gateway",
+  "tool_count": 1,
+  "tools": [
+    "internal_write_proof_7f3a"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "connected",
+  "user_id": "dev@example.com",
+  "provider": "gateway",
+  "tool_count": 1,
+  "tools": [
+    "internal_only_secret_tool_7f3a"
+  ]
+}

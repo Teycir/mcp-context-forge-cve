@@ -1,0 +1,26 @@
+===== 2026-11-19T13:26:01Z connect-write
+POST http://10.77.0.2:4444/llmchat/connect
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwYWIyYjlmNS1hMmMxLTQ1Y2EtOTIwNC05MTkwMDAwNWEyNzEiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ3NTEsImV4cCI6MTc5NTA5NTk1MSwianRpIjoiNTVlOTYwYmMtNmNhNC00NWFkLWFjYTctNzNkM2RiYjliNTFmIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDc1MSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.DVtSClTvLt_Wal8OMP0UYVm2puwYKWeltpzqF4sERrU
+
+{"user_id": "dev@example.com", "server": {"url": "http://rebind.test:19000/mcp", "transport": "streamable_http"}, "llm": {"model": "stub-model"}}
+--- status=400
+date: Thu, 19 Nov 2026 13:26:01 GMT
+server: uvicorn
+content-length: 31
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-h52grDn4JExkwU9crV68Fw'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 95
+x-correlation-id: 173951cd8c31468e98dce4f070a59d25
+
+{"detail":"Invalid server URL"}

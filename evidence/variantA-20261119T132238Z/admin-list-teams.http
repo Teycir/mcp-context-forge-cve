@@ -1,0 +1,31 @@
+===== 2026-11-19T13:22:38Z admin-list-teams
+GET http://10.77.0.2:4444/teams/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjhkZjZjNy04YzA4LTQ0ZjgtYjljZS1kZTdlNTU0Y2Y3MzQiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ1NTgsImV4cCI6MTc5NTA5NTc1OCwianRpIjoiZGZlYTFkYzEtM2Y1My00YTU2LTkwMzAtZGI2ZDdiMzFiNzlkIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDU1OCwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.bZKZKduqZbm8_pIEXduu7fCt5TRAyWk9Idki19DnpaQ
+
+
+--- status=200
+date: Thu, 19 Nov 2026 13:22:37 GMT
+server: uvicorn
+content-length: 346
+content-type: application/json
+vary: Origin, Accept-Encoding, Authorization
+content-encoding: zstd
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-R7pAc0Fewn58KKuT9d2vUw'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 500
+x-ratelimit-remaining: 492
+x-correlation-id: bf123a50f3344441bf977ba28ac2b386
+sunset: Sat, 26 Sep 2026 00:00:00 GMT
+deprecation: true
+link: </v1/teams/>; rel="successor-version"
+x-deprecated-endpoint: This endpoint is deprecated. Use /v1/teams/ instead. It will be removed after Sat, 26 Sep 2026 00:00:00 GMT.
+
+{"teams":[{"id":"adddab8f6dcc472c9eb336277d59ee68","name":"Lab Team","slug":"lab-team","description":"lab","created_by":"admin@example.com","is_personal":false,"visibility":"private","max_members":null,"member_count":2,"created_at":"2026-11-19T13:19:02.360606","updated_at":"2026-11-19T13:19:02.360608","is_active":true},{"id":"6d8ee9b47d6447b98b7e03f4a0cb66dd","name":"Platform Administrator's Team","slug":"platform-administrators-team","description":"Personal workspace for admin@example.com","created_by":"admin@example.com","is_personal":true,"visibility":"private","max_members":null,"member_count":1,"created_at":"2026-11-19T13:19:00.391865","updated_at":"2026-11-19T13:19:00.391867","is_active":true}],"total":2}

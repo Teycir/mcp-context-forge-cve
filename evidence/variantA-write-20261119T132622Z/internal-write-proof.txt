@@ -1,0 +1,4 @@
+2026-11-19T13:26:32Z cat /tmp/internal_write_proof.txt
+rc=1
+cat: /tmp/internal_write_proof.txt: No such file or directory
+

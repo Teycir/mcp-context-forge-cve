@@ -1,0 +1,33 @@
+{
+  "teams": [
+    {
+      "id": "adddab8f6dcc472c9eb336277d59ee68",
+      "name": "Lab Team",
+      "slug": "lab-team",
+      "description": "lab",
+      "created_by": "admin@example.com",
+      "is_personal": false,
+      "visibility": "private",
+      "max_members": null,
+      "member_count": 2,
+      "created_at": "2026-11-19T13:19:02.360606",
+      "updated_at": "2026-11-19T13:19:02.360608",
+      "is_active": true
+    },
+    {
+      "id": "6d8ee9b47d6447b98b7e03f4a0cb66dd",
+      "name": "Platform Administrator's Team",
+      "slug": "platform-administrators-team",
+      "description": "Personal workspace for admin@example.com",
+      "created_by": "admin@example.com",
+      "is_personal": true,
+      "visibility": "private",
+      "max_members": null,
+      "member_count": 1,
+      "created_at": "2026-11-19T13:19:00.391865",
+      "updated_at": "2026-11-19T13:19:00.391867",
+      "is_active": true
+    }
+  ],
+  "total": 2
+}

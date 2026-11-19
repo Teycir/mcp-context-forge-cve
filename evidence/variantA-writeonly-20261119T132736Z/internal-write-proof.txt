@@ -1,0 +1,3 @@
+2026-11-19T13:27:46Z cat /tmp/internal_write_proof.txt
+rc=0
+WRITE_PROOF_7f3a

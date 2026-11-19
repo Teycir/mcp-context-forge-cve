@@ -1,0 +1,26 @@
+===== 2026-11-19T13:22:38Z admin-assign-developer
+POST http://10.77.0.2:4444/rbac/users/dev@example.com/roles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjhkZjZjNy04YzA4LTQ0ZjgtYjljZS1kZTdlNTU0Y2Y3MzQiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTQ1NTgsImV4cCI6MTc5NTA5NTc1OCwianRpIjoiZGZlYTFkYzEtM2Y1My00YTU2LTkwMzAtZGI2ZDdiMzFiNzlkIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5NDU1OCwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.bZKZKduqZbm8_pIEXduu7fCt5TRAyWk9Idki19DnpaQ
+
+{"role_id": "ea8c540d-7d15-443d-85b8-e6d0a93b8679", "scope": "team", "scope_id": "adddab8f6dcc472c9eb336277d59ee68"}
+--- status=400
+date: Thu, 19 Nov 2026 13:22:37 GMT
+server: uvicorn
+content-length: 114
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-iIYb-zVla2qPzPBRQUAYxw'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 30
+x-ratelimit-remaining: 26
+x-correlation-id: e06a2de59d0645f48c486963901b0244
+
+{"detail":"Invalid request. Please check your input and try again. (reference: e06a2de59d0645f48c486963901b0244)"}

@@ -1,0 +1,51 @@
+Hello Dwight,
+
+Thanks for the acknowledgement.
+
+HackerOne is not available to me: I can't complete a third-party platform's identity
+verification (government ID / biometric checks) or accept an additional NDA. I would like to
+use GitHub's private vulnerability reporting instead, which needs no third-party identity
+checks.
+
+I checked the repository today. Private vulnerability reporting is disabled:
+
+  GET https://api.github.com/repos/IBM/mcp-context-forge/private-vulnerability-reporting
+  -> {"enabled": false}
+
+With it disabled, a non-maintainer cannot open a security advisory on IBM/mcp-context-forge.
+Two ways forward:
+
+1. Enable "Private vulnerability reporting" in the repository's Security settings, then I file
+   at https://github.com/IBM/mcp-context-forge/security/advisories/new. No NDA, no ID upload.
+2. Open a draft advisory yourself and add me as a collaborator; I will paste the advisory text
+   and evidence into it.
+
+If neither is possible, the report stays in this thread and I will send the advisory, raw
+captures and sha256 manifest inline or as attachments.
+
+Recap:
+
+  Endpoint: POST /llmchat/connect (ContextForge MCP Gateway, mcp-contextforge-gateway).
+  Flaw: the URL is validated once (mcpgateway/routers/llmchat_router.py:1083-1087 in 1.1.1) but
+  the streamable-HTTP transport resolves the hostname again
+  (mcpgateway/services/mcp_client_chat_service.py:105) with no IP pinning. A TTL-0 name that
+  answers public-then-127.0.0.1 passes validation and connects to loopback.
+  Effect: an authenticated user with the default "developer" role gets the internal server's
+  tool list from /llmchat/connect and invokes those tools via /llmchat/chat.
+  Affected: 1.0.0-RC2 through 1.1.1 (rebinding). 0.9.0 and 1.0.0-BETA-1 through 1.0.0-RC1 had
+  no URL validation at all (direct SSRF) and are worth separate IDs.
+  Verified: 1.1.1 at commit 85474a7c0eefc8c5d0e958400af7bc0ce59dfe63, isolated lab, plus a
+  variant using a real public model provider.
+  Fix: the pinning helpers already used by DCR/A2A/tool services
+  (SecurityValidator.validate_url_for_connection_pinning + pin_url_to_resolved_ip,
+  mcpgateway/common/validators.py:76,1651); /llmchat/connect never calls them.
+
+On timing: publication stays at 2026-11-26 (7 calendar days from the notice). If IBM needs
+longer, reply in this thread with a fix ETA and I will consider a bounded extension.
+
+Please confirm (a) the channel (GHSA once enabled, or email) and (b) whether IBM PSIRT will
+assign a CVE.
+
+Regards,
+Teycir
+github.com/Teycir

@@ -6,7 +6,8 @@ Status as of 2026-11-19: row 1 sent; PSIRT replied (row 2) redirecting to Hacker
 |---|---|---|---|---|---|---|
 | 1 | IBM PSIRT | psirt@us.ibm.com | Vendor notice + CVE request | sent | 2026-11-19T13:49:49Z | `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>` |
 | 2 | IBM PSIRT (reply) | psirt@us.ibm.com | Acknowledgement — redirect to HackerOne | replied | 2026-11-19 (exact time pending `.eml`) | reply Message-ID pending |
-| 2a | HackerOne (IBM program) | link from PSIRT reply | Complete submission | declined — third-party ID/NDA not acceptable; email alternatives offered (`cna/reply-decline-hackerone.txt`) | — | — |
+| 2a | HackerOne (IBM program) | link from PSIRT reply | Complete submission | declined — third-party ID/NDA not acceptable | — | — |
+| 2b | GitHub GHSA (IBM/mcp-context-forge) | repo Security → advisories/new | Private report, no third-party ID | blocked — PVR disabled (`cna/ghsa-pvr-check.txt`); asked PSIRT to enable or add me to a draft | — | — |
 | 3 | GitHub private advisory | `IBM/mcp-context-forge` → Security | Courtesy copy to maintainers | not opened | — | — |
 | 4 | MITRE | cveform.mitre.org | CNA of last resort at T+4 days | not sent | — | — |
 | 5 | VulDB | vuldb.com/?submit | Alternative CNA (only if MITRE/PSIRT fail) | not sent | — | — |

@@ -1,0 +1,4 @@
+# GHSA path check — 2026-11-19T18:23:12Z
+repo: IBM/mcp-context-forge (public, not archived)
+PVR endpoint: GET /repos/IBM/mcp-context-forge/private-vulnerability-reporting
+{"enabled":false}consequence: non-maintainer cannot create a GHSA on this repository; PVR must be enabled or a maintainer must open a draft advisory.

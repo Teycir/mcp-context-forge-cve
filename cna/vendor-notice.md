@@ -62,8 +62,7 @@ github.com/Teycir
 
 ## Send checklist
 
-- [ ] Attach `cve-submission/advisory.md`
-- [ ] Attach `evidence/lab-20261119T124614Z/sha256sums.txt`
+- [ ] Body only — no attachments (repo is private; share details only on request)
 - [ ] Save the sent message with full headers to `cna/vendor-notice-<date>.eml`
 - [ ] Record Date, Message-ID, recipients in `cna/contact-log.md`
 - [ ] Do not attach the Docker images or credentials

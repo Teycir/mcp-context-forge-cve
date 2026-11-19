@@ -1,0 +1,42 @@
+2026-11-19T12:45:02Z START cache 127.0.0.1:53 upstream 10.77.0.3:5353
+2026-11-19T12:45:11Z MISS rebind.test -> 93.184.216.34 ttl=0 cached=False
+2026-11-19T12:45:11Z ERR index out of range
+2026-11-19T12:45:13Z MISS rebind.test -> 93.184.216.34 ttl=0 cached=False
+2026-11-19T12:45:13Z ERR index out of range
+2026-11-19T12:45:15Z MISS rebind.test -> 93.184.216.34 ttl=0 cached=False
+2026-11-19T12:45:15Z ERR index out of range
+2026-11-19T12:45:17Z MISS rebind.test -> 93.184.216.34 ttl=0 cached=False
+2026-11-19T12:45:17Z ERR index out of range
+2026-11-19T12:45:19Z MISS rebind.test -> 93.184.216.34 ttl=300 cached=True
+2026-11-19T12:45:19Z HIT rebind.test -> 93.184.216.34 ttl=299
+2026-11-19T12:45:19Z HIT rebind.test -> 93.184.216.34 ttl=299
+2026-11-19T12:45:19Z HIT rebind.test -> 93.184.216.34 ttl=299
+2026-11-19T12:45:29Z HIT rebind.test -> 93.184.216.34 ttl=289
+2026-11-19T12:45:29Z HIT rebind.test -> 93.184.216.34 ttl=289
+2026-11-19T12:45:40Z CACHE_FLUSH 1
+2026-11-19T12:45:40Z MISS rebind.test -> 93.184.216.34 ttl=0 cached=False
+2026-11-19T12:45:40Z ERR index out of range
+2026-11-19T12:45:42Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:42Z ERR index out of range
+2026-11-19T12:45:44Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:44Z ERR index out of range
+2026-11-19T12:45:46Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:46Z ERR index out of range
+2026-11-19T12:45:48Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:48Z ERR index out of range
+2026-11-19T12:45:50Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:50Z ERR index out of range
+2026-11-19T12:45:52Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:52Z ERR index out of range
+2026-11-19T12:45:54Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:54Z ERR index out of range
+2026-11-19T12:45:56Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:56Z ERR index out of range
+2026-11-19T12:45:58Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:45:58Z ERR index out of range
+2026-11-19T12:46:00Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:46:00Z ERR index out of range
+2026-11-19T12:46:02Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:46:02Z ERR index out of range
+2026-11-19T12:46:04Z MISS rebind.test -> 127.0.0.1 ttl=0 cached=False
+2026-11-19T12:46:04Z ERR index out of range

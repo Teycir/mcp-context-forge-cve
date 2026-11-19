@@ -1,0 +1,30 @@
+===== 2026-11-19T12:45:11Z admin-assign-developer
+POST http://10.77.0.2:4444/rbac/users/dev@example.com/roles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYzQ4YTNjYS05ZjlmLTRlNDMtOGVhNy0xMDkzZjUzNWJkMTEiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTIzMTEsImV4cCI6MTc5NTA5MzUxMSwianRpIjoiODg4MDVmZjgtZjIzOS00NjFlLTg1NmItZTdlMWFlYjQzYTAyIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5MjMxMSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.QS9A7mYEQkt1_8l3jZOGxpllm3c-HSo3JQHgXeJsA9o
+
+{"role_id": "a6f27b11-e550-485b-9029-36c8d931ab09", "scope": "team", "scope_id": "93fe53ca3cad43f8995dec03c4cbf029"}
+--- status=200
+date: Thu, 19 Nov 2026 12:45:10 GMT
+server: uvicorn
+content-length: 333
+content-type: application/json
+vary: Origin, Authorization
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-NnCHabg3VXq49oHMGNfT1Q'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 30
+x-ratelimit-remaining: 28
+x-correlation-id: 1036d70bd75941669f1f65967b47499c
+sunset: Sat, 26 Sep 2026 00:00:00 GMT
+deprecation: true
+link: </v1/rbac/users/dev@example.com/roles>; rel="successor-version"
+x-deprecated-endpoint: This endpoint is deprecated. Use /v1/rbac/users/dev@example.com/roles instead. It will be removed after Sat, 26 Sep 2026 00:00:00 GMT.
+
+{"id":"9d074752-5ee0-411d-9e6d-18beb85c841f","user_email":"dev@example.com","role_id":"a6f27b11-e550-485b-9029-36c8d931ab09","role_name":null,"scope":"team","scope_id":"93fe53ca3cad43f8995dec03c4cbf029","granted_by":"admin@example.com","granted_at":"2026-11-19T12:45:11.407482","expires_at":null,"is_active":true,"grant_source":null}

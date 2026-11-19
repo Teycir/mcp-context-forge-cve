@@ -1,0 +1,37 @@
+2026-11-19T12:45:02.166654Z START control 0.0.0.0:8082
+2026-11-19T12:45:02.166702Z START authoritative dns 0.0.0.0:5353 zone=rebind.test
+2026-11-19T12:45:11.419708Z q#1 A rebind.test -> 93.184.216.34 ttl=0
+2026-11-19T12:45:11.419953Z other type=28 name=rebind.test
+2026-11-19T12:45:13.420758Z q#2 A rebind.test -> 93.184.216.34 ttl=0
+2026-11-19T12:45:13.421048Z other type=28 name=rebind.test
+2026-11-19T12:45:15.422118Z q#3 A rebind.test -> 93.184.216.34 ttl=0
+2026-11-19T12:45:15.423202Z other type=28 name=rebind.test
+2026-11-19T12:45:17.430431Z q#4 A rebind.test -> 93.184.216.34 ttl=0
+2026-11-19T12:45:17.430977Z other type=28 name=rebind.test
+2026-11-19T12:45:19.619591Z q#1 A rebind.test -> 93.184.216.34 ttl=300
+2026-11-19T12:45:40.352607Z q#1 A rebind.test -> 93.184.216.34 ttl=0
+2026-11-19T12:45:40.352912Z other type=28 name=rebind.test
+2026-11-19T12:45:42.360457Z q#2 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:42.361187Z other type=28 name=rebind.test
+2026-11-19T12:45:44.360948Z q#3 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:44.361741Z other type=28 name=rebind.test
+2026-11-19T12:45:46.362133Z q#4 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:46.363038Z other type=28 name=rebind.test
+2026-11-19T12:45:48.806295Z q#5 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:48.806502Z other type=28 name=rebind.test
+2026-11-19T12:45:50.807991Z q#6 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:50.808907Z other type=28 name=rebind.test
+2026-11-19T12:45:52.808968Z q#7 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:52.809643Z other type=28 name=rebind.test
+2026-11-19T12:45:54.831323Z q#8 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:54.831635Z other type=28 name=rebind.test
+2026-11-19T12:45:56.832898Z q#9 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:56.833684Z other type=28 name=rebind.test
+2026-11-19T12:45:58.833956Z q#10 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:45:58.834685Z other type=28 name=rebind.test
+2026-11-19T12:46:00.867059Z q#11 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:46:00.867644Z other type=28 name=rebind.test
+2026-11-19T12:46:02.868958Z q#12 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:46:02.869683Z other type=28 name=rebind.test
+2026-11-19T12:46:04.869970Z q#13 A rebind.test -> 127.0.0.1 ttl=0
+2026-11-19T12:46:04.870770Z other type=28 name=rebind.test

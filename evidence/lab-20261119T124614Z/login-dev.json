@@ -1,0 +1,19 @@
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NzVjYmJlZC0xOWM4LTQwYWUtOTdiYS1jNmVmNmU1Yjk5OWIiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTIzMTksImV4cCI6MTc5NTA5MzUxOSwianRpIjoiMjUyN2ExOGItOWUyMi00ODhlLTk2ZTAtNGZjZWE5ZWQ1NmU5IiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5MjMxOSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.EHNpaSc0gC4bfbzyIkaQsSG1_VlT0_H54aJDzKdAZB4",
+  "token_type": "bearer",
+  "expires_in": 1200,
+  "user": {
+    "email": "dev@example.com",
+    "full_name": "Dev User",
+    "is_admin": false,
+    "is_active": true,
+    "auth_provider": "local",
+    "created_at": "2026-11-19T12:45:11.313010",
+    "last_login": "2026-11-19T12:45:19.584025Z",
+    "email_verified": true,
+    "password_change_required": false,
+    "failed_login_attempts": 0,
+    "locked_until": null,
+    "is_locked": false
+  }
+}

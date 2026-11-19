@@ -1,0 +1,31 @@
+===== 2026-11-19T12:45:10Z login-admin
+POST http://10.77.0.2:4444/auth/login
+Content-Type: application/json
+
+{"email": "admin@example.com", "password": "Str0ng-Pass-R4ndom-9281!"}
+--- status=200
+date: Thu, 19 Nov 2026 12:45:10 GMT
+server: uvicorn
+content-length: 703
+content-type: application/json
+set-cookie: mcpgateway_csrf_token=814a9c8760d5cffb97a5f7c22c357e92da708909979608124b2b68e48e9a0e55; Max-Age=3600; Path=/; SameSite=Strict; Secure
+vary: Origin, Accept-Encoding, Authorization
+content-encoding: zstd
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 0
+x-download-options: noopen
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src 'self'; script-src-elem 'self' 'nonce-h1mm1EQwYEgzdOFh2FDT4Q'; script-src-attr 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss: https:; frame-ancestors 'none';
+cache-control: no-store, private
+pragma: no-cache
+expires: 0
+x-ratelimit-limit: 500
+x-ratelimit-remaining: 498
+x-correlation-id: f783e6a1a36e4cb88bb6f27c8e58cbad
+sunset: Sat, 26 Sep 2026 00:00:00 GMT
+deprecation: true
+link: </v1/auth/login>; rel="successor-version"
+x-deprecated-endpoint: This endpoint is deprecated. Use /v1/auth/login instead. It will be removed after Sat, 26 Sep 2026 00:00:00 GMT.
+
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYzQ4YTNjYS05ZjlmLTRlNDMtOGVhNy0xMDkzZjUzNWJkMTEiLCJpc3MiOiJtY3BnYXRld2F5IiwiYXVkIjoibWNwZ2F0ZXdheS1hcGkiLCJpYXQiOjE3OTUwOTIzMTEsImV4cCI6MTc5NTA5MzUxMSwianRpIjoiODg4MDVmZjgtZjIzOS00NjFlLTg1NmItZTdlMWFlYjQzYTAyIiwibGFzdF9hY3Rpdml0eSI6MTc5NTA5MjMxMSwiYXV0aF9wcm92aWRlciI6ImxvY2FsIiwidG9rZW5fdXNlIjoic2Vzc2lvbiIsInNjb3BlcyI6eyJzZXJ2ZXJfaWQiOm51bGwsInBlcm1pc3Npb25zIjpbIioiXSwiaXBfcmVzdHJpY3Rpb25zIjpbXSwidGltZV9yZXN0cmljdGlvbnMiOnt9fSwiZW52IjoiZGV2ZWxvcG1lbnQifQ.QS9A7mYEQkt1_8l3jZOGxpllm3c-HSo3JQHgXeJsA9o","token_type":"bearer","expires_in":1200,"user":{"email":"admin@example.com","full_name":"Platform Administrator","is_admin":true,"is_active":true,"auth_provider":"local","created_at":"2026-11-19T12:45:10.058695","last_login":"2026-11-19T12:45:11.177606Z","email_verified":true,"password_change_required":true,"failed_login_attempts":0,"locked_until":null,"is_locked":false}}

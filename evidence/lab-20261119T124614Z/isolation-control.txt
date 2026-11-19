@@ -1,0 +1,4 @@
+2026-11-19T12:46:06Z attacker-container reachability
+10.77.0.2:19000 BLOCKED ConnectionRefusedError: [Errno 111] Connection refused
+127.0.0.1:19000 BLOCKED ConnectionRefusedError: [Errno 111] Connection refused
+

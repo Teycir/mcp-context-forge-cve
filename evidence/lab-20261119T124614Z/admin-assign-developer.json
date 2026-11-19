@@ -1,0 +1,13 @@
+{
+  "id": "9d074752-5ee0-411d-9e6d-18beb85c841f",
+  "user_email": "dev@example.com",
+  "role_id": "a6f27b11-e550-485b-9029-36c8d931ab09",
+  "role_name": null,
+  "scope": "team",
+  "scope_id": "93fe53ca3cad43f8995dec03c4cbf029",
+  "granted_by": "admin@example.com",
+  "granted_at": "2026-11-19T12:45:11.407482",
+  "expires_at": null,
+  "is_active": true,
+  "grant_source": null
+}

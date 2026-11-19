@@ -1,0 +1,45 @@
+Hello Dwight,
+
+Thanks for the acknowledgement.
+
+I can't use HackerOne for this report. I'm not able to complete a third-party platform's
+identity verification (government ID / biometric checks) or accept an additional NDA, so that
+channel is not available to me.
+
+The report is already in this thread. I can complete it over email. Pick whichever fits your
+process:
+
+1. This thread. I can send the advisory, per-release range derivation, raw request/response
+   captures and a sha256 manifest as attachments, or inline as text if attachments are filtered.
+2. A private GitHub security advisory on IBM/mcp-context-forge, if private reporting is enabled.
+   GitHub-native, no third-party identity checks.
+3. PGP-encrypted email, if you provide a PSIRT key or fingerprint.
+4. Any IBM-hosted upload or portal that does not route through HackerOne.
+
+Recap, so this is actionable without the platform:
+
+  Endpoint: POST /llmchat/connect (ContextForge MCP Gateway, mcp-contextforge-gateway).
+  Flaw: the URL is validated once (mcpgateway/routers/llmchat_router.py:1083-1087 in 1.1.1) but
+  the streamable-HTTP transport resolves the hostname again
+  (mcpgateway/services/mcp_client_chat_service.py:105) with no IP pinning. A TTL-0 name that
+  answers public-then-127.0.0.1 passes validation and connects to loopback.
+  Effect: an authenticated user with the default "developer" role gets the internal server's
+  tool list from /llmchat/connect and invokes those tools via /llmchat/chat.
+  Affected: 1.0.0-RC2 through 1.1.1 (rebinding). 0.9.0 and 1.0.0-BETA-1 through 1.0.0-RC1
+  had no URL validation at all (direct SSRF) and are worth separate IDs.
+  Verified: 1.1.1 at commit 85474a7c0eefc8c5d0e958400af7bc0ce59dfe63, isolated lab, plus a
+  variant using a real public model provider.
+  Fix: the pinning helpers already used by DCR/A2A/tool services
+  (SecurityValidator.validate_url_for_connection_pinning + pin_url_to_resolved_ip,
+  mcpgateway/common/validators.py:76,1651); /llmchat/connect never calls them.
+
+On timing: my notice sets publication at 2026-11-26 (7 calendar days from the notice). If IBM
+needs longer, say so in this thread with a fix ETA and I will consider a bounded extension.
+Absent a reply or a fix, I publish the advisory and evidence on that date.
+
+Please confirm (a) that email is an acceptable channel for this report and (b) whether IBM
+PSIRT will assign a CVE.
+
+Regards,
+Teycir
+github.com/Teycir

@@ -1,10 +1,14 @@
 # CNA playbook — getting a CVE for an IBM-hosted open-source project
 
-## Why the GitHub advisory is not the plan
+## Why the GitHub advisory is not the CNA
 
 A private GitHub advisory only becomes a CVE when the **maintainer publishes** it. If the
 maintainer is unresponsive, the advisory sits unpublished and no record exists. Maintainer action
 must never be the critical path.
+
+Since 2026-11-19 the GHSA is the requested *transport* for the report (IBM directed HackerOne,
+declined; PVR on the repo is disabled). It still does not assign a CVE on its own: CVE issuance
+depends on IBM PSIRT, or on MITRE/VulDB as fallback.
 
 > Always pair the vendor notice with a CNA that can assign unilaterally.
 
@@ -27,8 +31,9 @@ negotiations drag.
 
 **T0 — vendor notice + PSIRT submission.**
 
-1. Check `IBM/mcp-context-forge` → Security tab. If private reporting is enabled, open a private
-   advisory with `cve-submission/advisory.md` **and** email PSIRT. If it is disabled, email only.
+1. Check `IBM/mcp-context-forge` → Security tab (PVR was disabled on 2026-11-19,
+   `cna/ghsa-pvr-check.txt`). If enabled, file the private advisory from `cna/ghsa-draft.md`
+   **and** email PSIRT; if disabled, email only and ask PSIRT to enable it or open a draft.
 2. Email `psirt@us.ibm.com` using `cna/vendor-notice.md`. Cc the maintainer listed in
    `pyproject.toml` if a public address exists. Keep the sent copy and Message-ID.
 3. Do **not** submit to VulDB or MITRE yet.
@@ -55,6 +60,23 @@ negotiations drag.
 - A second follow-up in the same thread.
 
 Save each as a file under `cna/` and reference it in the MITRE form.
+
+## GHSA branch (used 2026-11-19)
+
+- IBM PSIRT directed the report to HackerOne; declined (third-party identity verification / NDA).
+- Requested GitHub private vulnerability reporting on `IBM/mcp-context-forge`; still disabled
+  (`cna/ghsa-pvr-check.txt`). Ready-to-paste advisory text: `cna/ghsa-draft.md`.
+- If PVR is enabled: file at `/security/advisories/new` with the draft fields, then ask PSIRT to
+  assign a CVE and confirm the fixed version. Credit: Teycir.
+- If PSIRT refuses both GHSA and email: proceed to CERT/CC on 2026-11-23; publication stays
+  2026-11-26.
+
+## Fix watch
+
+`pocs/watch_fix.sh` — exits 0 when `llmchat_router.py` references
+`pin_url_to_resolved_ip`/`validate_url_for_connection_pinning`, 1 while unfixed. Run after any
+release. On FIXED: build that tag, rerun `pocs/variant_a.py`, and record PASS/FAIL in `evidence/`
+before publishing.
 
 ## Rules
 

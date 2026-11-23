@@ -1,0 +1,9 @@
+# Fix watch — 2026-11-23T16:50:00+01:00 (updated)
+PVR: {"enabled":false}
+latest release: v1.1.1 2026-11-10T13:46:57Z
+llmchat_router.py blob: unchanged (no pinning refs — fix is in mcp_client_chat_service.py)
+mcp_client_chat_service.py blob: references resolve_pinned_target / build_pinned_httpx_client_factory / SniPinningTransport
+pinning refs in mcp_client_chat_service.py: 1 (resolve_pinned_target call)
+last commit touching file: a1c3293b4 2026-11-23T13:03:58Z (fix(llmchat): harden outbound MCP connections)
+=> FIX COMMITTED on main + release/1.1.2, NOT YET TAGGED. __version__ still reports 1.1.1.
+=> Build release/1.1.2 tag when available, rerun pocs/variant_a.py, record PASS/FAIL in evidence/ before publishing.

@@ -73,10 +73,15 @@ Save each as a file under `cna/` and reference it in the MITRE form.
 
 ## Fix watch
 
-`pocs/watch_fix.sh` — exits 0 when `llmchat_router.py` references
-`pin_url_to_resolved_ip`/`validate_url_for_connection_pinning`, 1 while unfixed. Run after any
-release. On FIXED: build that tag, rerun `pocs/variant_a.py`, and record PASS/FAIL in `evidence/`
-before publishing.
+`pocs/watch_fix.sh` — exits 0 when `mcp_client_chat_service.py` references
+`resolve_pinned_target` / `build_pinned_httpx_client_factory` (used by `streamable_http_client`
+via `SniPinningTransport`), 1 while unfixed. Run after any release. On FIXED: build that tag,
+rerun `pocs/variant_a.py`, and record PASS/FAIL in `evidence/` before publishing.
+
+**FIX VERIFIED 2026-11-23:** commit `a1c3293b4` on `main` and `release/1.1.2` implements
+exactly this — `_build_transport()` now resolves + pins via `resolve_pinned_target()` and
+dials only pinned addresses; redirects are disabled. Not yet tagged; `__version__` still
+reports `1.1.1`.
 
 ## Rules
 

@@ -11,13 +11,13 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Source | `github.com/IBM/mcp-context-forge` |
 | Audited | 1.1.1, commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17) |
 | Affected | `1.0.0-RC2` – `1.1.1` (rebinding); `0.9.0` and `1.0.0-BETA-1` – `1.0.0-RC1` (direct SSRF) |
-| Fixed in | commit `a1c3293b4` (2026-11-23), shipped in **v1.1.2** (GH release 2026-11-25T09:38:04Z; PyPI 2026-11-25T09:55:46Z) |
+| Fixed in | commit `a1c3293b4657140cd801ecc4873a96919ed7dd95` (2026-11-23), shipped in **v1.1.2** (GH release 2026-11-25T09:38:04Z; PyPI 2026-11-25T09:55:46Z) |
 | Severity | High — CVSS 3.1 **8.2** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` |
 | Conservative scoring | 7.1 High with `S:U` if scope change is rejected |
 | CWE | CWE-918 (Server-Side Request Forgery) |
 | CVE | pending — submission pack in `cve-submission/`, `cna/` |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
-| Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
+| Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
 
 ## Issue
 

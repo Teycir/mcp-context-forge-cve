@@ -34,7 +34,7 @@ Captcha is user-filled. One finding per submission: **MCF-2026-01 only**.
 
 "Reported to IBM PSIRT on 2026-11-19T13:49:49Z (ticket ADV0400680), Message-ID
 `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>`.
-PSIRT redirected to HackerOne; declined (third-party identity/NDA). Fix commit `a1c3293b4`
+PSIRT redirected to HackerOne; declined (third-party identity/NDA). Fix commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`
 (PR #7658) released in v1.1.2 on 2026-11-25T09:38:04Z (PyPI 09:55:46Z). Verified fixed in the
 1.1.2 sdist. IBM has not assigned a CVE."
 

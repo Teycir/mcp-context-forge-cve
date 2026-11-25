@@ -12,7 +12,7 @@ Conservative alternative if `S:C` is rejected: **7.1** `AV:N/AC:H/PR:L/UI:N/S:U/
 
 **Affected:** `1.0.0-RC2` – `1.1.1` (DNS rebinding); `0.9.0` – `1.0.0-RC1` (direct SSRF — the
 endpoint had no outbound URL validation; `0.9.0` also lacked an auth dependency).
-**Fixed:** `1.1.2` (2026-11-25), fix commit `a1c3293b4`, PR #7658.
+**Fixed:** `1.1.2` (2026-11-25), fix commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`, PR #7658.
 **Tested:** `1.1.1`, commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17), exact PyPI
 release, built and run locally.
 

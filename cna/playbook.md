@@ -78,7 +78,7 @@ Save each as a file under `cna/` and reference it in the MITRE form.
 via `SniPinningTransport`), 1 while unfixed. Run after any release. On FIXED: build that tag,
 rerun `pocs/variant_a.py`, and record PASS/FAIL in `evidence/` before publishing.
 
-**FIX VERIFIED 2026-11-23:** commit `a1c3293b4` on `main` and `release/1.1.2` implements
+**FIX VERIFIED 2026-11-23:** commit `a1c3293b4657140cd801ecc4873a96919ed7dd95` on `main` and `release/1.1.2` implements
 exactly this — `_build_transport()` now resolves + pins via `resolve_pinned_target()` and
 dials only pinned addresses; redirects are disabled. **Released in v1.1.2 on 2026-11-25T09:38:04Z**
 (PyPI 09:55:46Z); release notes line for PR #7658. Fix watch closed.

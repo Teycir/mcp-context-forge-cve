@@ -1,6 +1,6 @@
 # VulnCheck submission — MCF-2026-01
 
-Status: **READY — not submitted** (repo public since 2026-11-25T11:45:49Z). One finding, one form submission.
+Status: **SUBMITTED 2026-11-25T11:55:37Z** — VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea`. Repo public since 2026-11-25T11:45:49Z. One finding, one form submission.
 
 ## Files
 
@@ -20,7 +20,7 @@ Status: **READY — not submitted** (repo public since 2026-11-25T11:45:49Z). On
 - [x] Fix released: v1.1.2, 2026-11-25T09:38:04Z; verified in sdist
 - [x] Reproduction repo public since 2026-11-25T11:45:49Z — https://github.com/Teycir/mcp-context-forge-cve
 - [x] `submission/vulncheck/` committed and pushed
-- [ ] Submit form, record case ID in `timeline.md`
+- [x] Submitted 2026-11-25T11:55:37Z — VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea`
 - [ ] `sha256sum -c SHA256SUMS`
 
 ## Notes

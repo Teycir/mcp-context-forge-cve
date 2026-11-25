@@ -47,4 +47,4 @@ PSIRT redirected to HackerOne; declined (third-party identity/NDA). Fix commit `
 - Fixed: `1.1.2`
 - Privileges: authenticated `developer` role (`llm.invoke`); no admin
 - Package: https://github.com/Teycir/mcp-context-forge-cve
-- VulnCheck case ID: _record after submit_
+- VulnCheck case ID: `87e8faaf-6087-4a84-b57b-a998778122ea` (submitted 2026-11-25T11:55:37Z)

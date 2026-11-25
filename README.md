@@ -15,7 +15,7 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Severity | High — CVSS 3.1 **8.2** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` |
 | Conservative scoring | 7.1 High with `S:U` if scope change is rejected |
 | CWE | CWE-918 (Server-Side Request Forgery) |
-| CVE | pending — VulnCheck case [`87e8faaf-6087-4a84-b57b-a998778122ea`](https://vulncheck.com/advisories/report) filed 2026-11-25T11:55:37Z |
+| CVE | pending — VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea` filed 2026-11-25T11:55:37Z ([case record](submission/vulncheck/timeline.md)) |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
 | Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
 
@@ -43,7 +43,7 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | 2026-11-23T13:03:58Z | Fix committed `a1c3293b4657140cd801ecc4873a96919ed7dd95`; PR #7658 merged 13:12:46Z |
 | 2026-11-25T09:38:04Z | **v1.1.2** released (GitHub); PyPI 09:55:46Z |
 | 2026-11-25T11:45:49Z | Reproduction repo made public |
-| 2026-11-25T11:55:37Z | VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea` filed |
+| 2026-11-25T11:55:37Z | VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea` filed ([case record](submission/vulncheck/timeline.md)) |
 
 ## Upstream fix
 

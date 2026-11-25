@@ -8,6 +8,7 @@ Status: **READY — not submitted** (repo public since 2026-11-25T11:45:49Z). On
 |---|---|
 | `form-answers.md` | Paste-ready value for every field on vulncheck.com/advisories/report |
 | `details-MCF-2026-01.md` | Full "Vulnerability Details" text (root cause, repro, impact, fix) |
+| `PASTE-DETAILS.txt` | Byte-identical paste copy for the form textarea |
 | `MCF-2026-01.cve.json` | CVE 5.1 record draft; IDs/orgId are placeholders for VulnCheck |
 | `email-to-disclosure.txt` | Fallback email body (`disclosure@vulncheck.com`) |
 | `timeline.md` | UTC disclosure timeline; add VulnCheck case ID here |

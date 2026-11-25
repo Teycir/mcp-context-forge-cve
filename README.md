@@ -11,13 +11,20 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Source | `github.com/IBM/mcp-context-forge` |
 | Audited | 1.1.1, commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17) |
 | Affected | `1.0.0-RC2` – `1.1.1` (rebinding); `0.9.0` and `1.0.0-BETA-1` – `1.0.0-RC1` (direct SSRF) |
-| Fixed in | commit `a1c3293b4657140cd801ecc4873a96919ed7dd95` (2026-11-23), shipped in **v1.1.2** (GH release 2026-11-25T09:38:04Z; PyPI 2026-11-25T09:55:46Z) |
+| Fixed in | [commit `a1c3293b4`](https://github.com/IBM/mcp-context-forge/commit/a1c3293b4657140cd801ecc4873a96919ed7dd95) (2026-11-23), [PR #7658](https://github.com/IBM/mcp-context-forge/pull/7658), shipped in [**v1.1.2**](https://github.com/IBM/mcp-context-forge/releases/tag/v1.1.2) (2026-11-25) |
 | Severity | High — CVSS 3.1 **8.2** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` |
 | Conservative scoring | 7.1 High with `S:U` if scope change is rejected |
 | CWE | CWE-918 (Server-Side Request Forgery) |
 | CVE | pending — submission pack in `cve-submission/`, `cna/` |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
 | Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
+
+## Fix
+
+- **PR:** [IBM/mcp-context-forge#7658 — fix(llmchat): harden outbound MCP connections in the LLM Chat client](https://github.com/IBM/mcp-context-forge/pull/7658)
+- **Commit:** [`a1c3293b4657140cd801ecc4873a96919ed7dd95`](https://github.com/IBM/mcp-context-forge/commit/a1c3293b4657140cd801ecc4873a96919ed7dd95) — squash-merged 2026-11-23T13:12:46Z
+- **Release:** [v1.1.2](https://github.com/IBM/mcp-context-forge/releases/tag/v1.1.2) — 2026-11-25T09:38:04Z; PyPI 09:55:46Z
+- **Verification:** v1.1.2 pins the outbound target at `mcpgateway/services/mcp_client_chat_service.py:2177,2180`; evidence in `evidence/fix-verification-20261125T115927Z/`
 
 ## Issue
 

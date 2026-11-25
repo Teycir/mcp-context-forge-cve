@@ -19,7 +19,33 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
 | Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4657140cd801ecc4873a96919ed7dd95`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
 
-## Fix
+## Contents
+
+- [Timeline](#timeline)
+- [Upstream fix](#upstream-fix)
+- [Issue](#issue)
+- [Reproduce](#reproduce)
+- [Scope](#scope)
+- [Recommended remediation](#recommended-remediation)
+- [Disclosure status](#disclosure-status)
+- [Evidence](#evidence)
+
+## Timeline
+
+| Date (UTC) | Event |
+|---|---|
+| 2026-11-17 | Audited `1.1.1` at commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` |
+| 2026-11-19T12:46:06Z | PoC verified in local lab: loopback MCP tool invoked, negative controls pass |
+| 2026-11-19T13:47:11Z | Vendor notice composed (`Date:` header) |
+| 2026-11-19T13:49:49Z | **Email sent to `psirt@us.ibm.com`** — proof: [sent `.eml` with headers](cna/sent/20261119T134949Z-vendor-notice-psirt.eml), [contact log](cna/contact-log.md) |
+| 2026-11-19 | IBM PSIRT ticket **ADV0400680** opened |
+| 2026-11-19 | HackerOne (IBM program) declined — third-party identity/NDA |
+| 2026-11-23T13:03:58Z | Fix committed `a1c3293b4657140cd801ecc4873a96919ed7dd95`; PR #7658 merged 13:12:46Z |
+| 2026-11-25T09:38:04Z | **v1.1.2** released (GitHub); PyPI 09:55:46Z |
+| 2026-11-25T11:45:49Z | Reproduction repo made public |
+| 2026-11-25T11:55:37Z | VulnCheck case `87e8faaf-6087-4a84-b57b-a998778122ea` filed |
+
+## Upstream fix
 
 - **PR:** [IBM/mcp-context-forge#7658 — fix(llmchat): harden outbound MCP connections in the LLM Chat client](https://github.com/IBM/mcp-context-forge/pull/7658)
 - **Commit:** [`a1c3293b4657140cd801ecc4873a96919ed7dd95`](https://github.com/IBM/mcp-context-forge/commit/a1c3293b4657140cd801ecc4873a96919ed7dd95) — squash-merged 2026-11-23T13:12:46Z
@@ -79,7 +105,7 @@ isolation control    BLOCKED from attacker container to 10.77.0.2:19000 and 127.
 - **Not affected:** deployments that cannot resolve attacker-controlled names (egress DNS
   allowlist) or that set `SSRF_PROTECTION_ENABLED=false` only if they also block egress.
 
-## Fix
+## Recommended remediation
 
 1. Use the existing pinned-connection path in `llmchat_router.py`, as DCR/A2A/tool services do:
    `validated_target = await SecurityValidator.validate_url_for_connection_pinning(url, "MCP server URL")`
@@ -92,8 +118,8 @@ isolation control    BLOCKED from attacker container to 10.77.0.2:19000 and 127.
 
 - Notified: **2026-11-19T13:49:49Z** to `psirt@us.ibm.com` (Proton, text body, no attachments).
 - Message-ID: `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>`
-- Sent copy: `cna/sent/20261119T134949Z-vendor-notice-psirt.eml` (sha256 `4810b310669a7eb33be499ed0ff4e211543d01f2e737d7850c619b200573dde2`)
-- Log: `cna/contact-log.md` row 1.
+- Sent copy: [cna/sent/20261119T134949Z-vendor-notice-psirt.eml](cna/sent/20261119T134949Z-vendor-notice-psirt.eml) (sha256 `4810b310669a7eb33be499ed0ff4e211543d01f2e737d7850c619b200573dde2`)
+- Log: [cna/contact-log.md](cna/contact-log.md) row 1.
 - Fix released: **v1.1.2**, 2026-11-25T09:38:04Z (GitHub), 2026-11-25T09:55:46Z (PyPI).
   Release notes list PR #7658, "Apply outbound URL checks and DNS pinning to MCP connections from
   LLM Chat". Verified in the 1.1.2 sdist (sha256 `4c7248d17ea73f6d5f5443b943aab2386f09afdffc5d8da02e5ebafb45aa213c`):

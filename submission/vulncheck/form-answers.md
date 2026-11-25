@@ -19,7 +19,7 @@ paste-ready. One finding per submission: **MCF-2026-01 only**.
 | Coordinate disclosure? | **No** — vendor coordinated directly; fix already released in v1.1.2 (2026-11-25) |
 | Already reported to supplier? | **Yes.** Email to `psirt@us.ibm.com` 2026-11-19T13:49:49Z, Message-ID `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>`; IBM PSIRT ticket **ADV0400680**. PSIRT redirected to HackerOne; declined (third-party identity/NDA). Fix commit `a1c3293b4`, PR #7658; released v1.1.2 2026-11-25T09:38:04Z (PyPI 09:55:46Z). |
 | Previously requested CVE from MITRE w/o response? | No |
-| Already publicly disclosed? | No prior disclosure. Reproduction repo is made public at submission time: https://github.com/Teycir/mcp-context-forge-cve |
+| Already publicly disclosed? | No prior disclosure. Reproduction repo is public as of 2026-11-25T11:45:49Z: https://github.com/Teycir/mcp-context-forge-cve |
 | Generated with AI? | Yes — LLM assistance for source analysis and drafting. Reporter built the lab, executed the exploit, and verified every claim live. |
 | Validated on production code? | Yes — exact PyPI release 1.1.1, built and run in Docker; not a mock. |
 | Shodan / Fofa query | N/A — self-hosted gateway, no internet-wide fingerprint |

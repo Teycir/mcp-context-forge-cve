@@ -1,6 +1,6 @@
 # VulnCheck submission — MCF-2026-01
 
-Status: **READY — not submitted**. One finding, one form submission.
+Status: **READY — not submitted** (repo public since 2026-11-25T11:45:49Z). One finding, one form submission.
 
 ## Files
 
@@ -17,9 +17,8 @@ Status: **READY — not submitted**. One finding, one form submission.
 
 - [x] Vendor notified 2026-11-19T13:49:49Z (PSIRT ADV0400680); >72 h elapsed
 - [x] Fix released: v1.1.2, 2026-11-25T09:38:04Z; verified in sdist
-- [ ] Reproduction repo public — currently **PRIVATE**
-  (`gh repo edit Teycir/mcp-context-forge-cve --visibility public --accept-visibility-change-consequences`)
-- [ ] Add `submission/vulncheck/` to the repo and push
+- [x] Reproduction repo public since 2026-11-25T11:45:49Z — https://github.com/Teycir/mcp-context-forge-cve
+- [x] `submission/vulncheck/` committed and pushed
 - [ ] Submit form, record case ID in `timeline.md`
 - [ ] `sha256sum -c SHA256SUMS`
 

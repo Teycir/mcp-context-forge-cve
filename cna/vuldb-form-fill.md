@@ -7,8 +7,7 @@ Only after the 7-day window (see `cna/playbook.md`). VulDB publishes on submissi
 1. Open `https://vuldb.com/?submit`.
 2. **Vendor** — `IBM`. **Product** — `mcp-context-forge`. If the product is not listed, choose
    "new product" and use `mcp-context-forge (ContextForge MCP Gateway)`.
-3. **Version** — `1.1.1`. Leave "fixed version" empty and note "no fix as of <date>" in the
-   description.
+3. **Version** — `1.1.1`. **Fixed version** — `1.1.2` (released 2026-11-25).
 4. **Vulnerability type** — `SSRF` (CWE-918). If a free-text field exists, write
    `DNS rebinding SSRF via /llmchat/connect`.
 5. **Title** — `IBM mcp-context-forge /llmchat/connect DNS rebinding SSRF exposes loopback MCP tools`.
@@ -19,7 +18,7 @@ Only after the 7-day window (see `cna/playbook.md`). VulDB publishes on submissi
 9. **References** — repository URL and CWE URL. Do not link this repository before publication.
 10. **Proof** — upload `cve-submission/advisory.md` and
     `evidence/lab-20261119T124614Z/sha256sums.txt`. Do not upload the whole lab.
-11. **Vendor contact** — PSIRT email date and Message-ID; state "no fix, no CVE assigned at
+11. **Vendor contact** — PSIRT email date and Message-ID; state "fixed in 1.1.2, no CVE assigned at
     submission time".
 12. **Reporter** — name `Teycir`, URL `https://github.com/Teycir`. Choose credit, not anonymity.
 13. Submit. Save the confirmation page and the assigned VulDB entry ID into

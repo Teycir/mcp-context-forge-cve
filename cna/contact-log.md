@@ -1,6 +1,6 @@
 # Contact log
 
-Status as of 2026-11-23: row 1 sent; PSIRT replied (row 2) redirecting to HackerOne (row 2a). Fix committed 2026-11-23 (commit `a1c3293b4`) on `main` and `release/1.1.2`, not yet tagged/released.
+Status as of 2026-11-25: row 1 sent; PSIRT replied (row 2) redirecting to HackerOne (row 2a). Fix committed 2026-11-23 (commit `a1c3293b4`, PR #7658) and **released in v1.1.2** 2026-11-25T09:38:04Z (PyPI 09:55:46Z). Embargo over.
 
 | # | Channel | Address / URL | Purpose | Status | Date (UTC) | Message-ID / ticket |
 |---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@ Status as of 2026-11-23: row 1 sent; PSIRT replied (row 2) redirecting to Hacker
 | 2a | HackerOne (IBM program) | link from PSIRT reply | Complete submission | declined — third-party ID/NDA not acceptable; reply sent 2026-11-19 (time pending `.eml`) | — | pending |
 | 2c | IBM PSIRT (ticket) | psirt@us.ibm.com / ADV0400680 | Agree disclosure window, request fix ETA + CVE | reply drafted — bounded 30-days-after-fix (outer bound 2026-12-19); fix committed 2026-11-23, awaiting tag | — | ADV0400680 |
 
-| 2d | Vendor fix (verified in clone) | github.com/IBM/mcp-context-forge @ commit `a1c3293b4` | Fix: `_build_transport()` calls `resolve_pinned_target()`, `build_pinned_httpx_client_factory()` with `SniPinningTransport`, `follow_redirects=False` | committed on `main` + `release/1.1.2`, not yet tagged | 2026-11-23T13:03:00Z | `a1c3293b4` |
+| 2d | Vendor fix (verified in clone) | github.com/IBM/mcp-context-forge @ commit `a1c3293b4` | Fix: `_build_transport()` calls `resolve_pinned_target()`, `build_pinned_httpx_client_factory()` with `SniPinningTransport`, `follow_redirects=False` | shipped in v1.1.2 (2026-11-25T09:38:04Z) | 2026-11-23T13:03:00Z | `a1c3293b4` |
 | 2b | GitHub GHSA (IBM/mcp-context-forge) | repo Security → advisories/new | Private report, no third-party ID | requested 2026-11-19 (time pending `.eml`) — PVR disabled (`cna/ghsa-pvr-check.txt`); PSIRT asked to enable or add me to a draft | — | pending |
 | 3 | GitHub private advisory | `IBM/mcp-context-forge` → Security | Courtesy copy to maintainers | not opened | — | — |
 | 4 | MITRE | cveform.mitre.org | CNA of last resort at T+4 days | not sent | — | — |
@@ -33,6 +33,7 @@ Status as of 2026-11-23: row 1 sent; PSIRT replied (row 2) redirecting to Hacker
 
 ## Reminders
 
-- 7-day disclosure clock (deadline 2026-11-26) starts at the row 1 send time, not at PoC verification.
+- 7-day disclosure clock (deadline 2026-11-26) started at the row 1 send time; moot once v1.1.2
+  shipped on 2026-11-25.
 - If PSIRT assigns a CVE, stop and update `README.md` + `cve-submission/advisory.md` with the ID.
 - If the vendor ships a fix, verify it against `pocs/` before publishing.

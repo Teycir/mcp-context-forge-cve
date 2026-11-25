@@ -1,0 +1,36 @@
+Subject: CVE request — IBM ContextForge MCP Gateway: DNS-rebinding SSRF in /llmchat/connect (High)
+
+Hello,
+
+Requesting a CVE for a server-side request forgery fixed in mcp-contextforge-gateway 1.1.2.
+
+Vendor: IBM
+Product: ContextForge MCP Gateway (mcp-contextforge-gateway), LLM Chat MCP client
+Repository: https://github.com/IBM/mcp-context-forge
+Affected: 1.0.0-RC2 – 1.1.1 (DNS rebinding); 0.9.0 – 1.0.0-RC1 (direct SSRF)
+Fixed: 1.1.2, released 2026-11-25 (fix commit a1c3293b4, PR #7658)
+Tested: 1.1.1, commit 85474a7c0eefc8c5d0e958400af7bc0ce59dfe63
+
+Finding: POST /llmchat/connect validates the user-supplied MCP server URL once
+(SecurityValidator.validate_url) and passes the hostname to the streamable-HTTP transport,
+which resolves it again. A TTL-0 DNS name can answer public during validation and 127.0.0.1 at
+connect time. The gateway then lists and invokes loopback MCP tools via POST /llmchat/chat.
+Any authenticated account with the default developer role (llm.invoke) is sufficient.
+
+Severity: High
+CVSS 3.1: 8.2 AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N
+CWE: CWE-918
+
+Vendor contact: psirt@us.ibm.com, 2026-11-19T13:49:49Z, IBM PSIRT ADV0400680. Fix shipped
+2026-11-25; no CVE assigned by IBM.
+
+Reproduction package (public):
+https://github.com/Teycir/mcp-context-forge-cve
+
+AI disclosure: LLM assistance for source analysis and drafting; the reporter built the lab,
+executed the exploit, and verified every assertion.
+
+Credit: Teycir (https://github.com/Teycir)
+
+Thanks,
+Teycir

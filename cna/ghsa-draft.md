@@ -8,7 +8,7 @@ added as collaborator.
 | Ecosystem | pip |
 | Package name | `mcp-contextforge-gateway` |
 | Affected versions | `>= 1.0.0-RC2, <= 1.1.1` (rebinding); `0.9.0` and `>= 1.0.0-BETA-1, <= 1.0.0-RC1` (direct SSRF) |
-| Patched versions | none |
+| Patched versions | `1.1.2` |
 | Severity | High |
 | CVSS 3.1 vector | `CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` (8.2) |
 | CWE | CWE-918 Server-Side Request Forgery (SSRF) |

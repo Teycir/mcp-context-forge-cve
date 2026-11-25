@@ -1,0 +1,147 @@
+{
+  "dataType": "CVE_RECORD",
+  "dataVersion": "5.1",
+  "cveMetadata": {
+    "cveId": "CVE-2026-XXXXX",
+    "assignerOrgId": "00000000-0000-0000-0000-000000000000",
+    "assignerShortName": "VulnCheck",
+    "state": "PUBLISHED",
+    "datePublished": "2026-11-25T00:00:00.000Z",
+    "dateUpdated": "2026-11-25T00:00:00.000Z"
+  },
+  "containers": {
+    "cna": {
+      "providerMetadata": {
+        "orgId": "00000000-0000-0000-0000-000000000000",
+        "shortName": "VulnCheck"
+      },
+      "title": "IBM ContextForge MCP Gateway: DNS-rebinding SSRF in /llmchat/connect reaches loopback MCP tools",
+      "descriptions": [
+        {
+          "lang": "en",
+          "value": "ContextForge MCP Gateway (mcp-contextforge-gateway) 1.0.0-RC2 through 1.1.1 validates the user-supplied MCP server URL in POST /llmchat/connect once, then passes the hostname to the streamable-HTTP transport, which resolves it again. A DNS name with TTL 0 can answer with a public address during validation and 127.0.0.1 during the transport lookup. The gateway then connects to a loopback MCP server, returns its tool list in the connect response, and invokes its tools through POST /llmchat/chat. Any authenticated account with the default developer role (llm.invoke) is sufficient. Versions 0.9.0 through 1.0.0-RC1 are also affected by direct SSRF because the endpoint lacked outbound URL validation. Fixed in 1.1.2."
+        }
+      ],
+      "affected": [
+        {
+          "vendor": "IBM",
+          "product": "ContextForge MCP Gateway",
+          "packageName": "mcp-contextforge-gateway",
+          "collectionURL": "https://pypi.org/project/mcp-contextforge-gateway/",
+          "versions": [
+            {
+              "version": "0.9.0",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.0.0-BETA-1",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.0.0-RC1",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.0.0-RC2",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.1.0",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.1.1",
+              "status": "affected",
+              "versionType": "semver"
+            },
+            {
+              "version": "1.1.2",
+              "status": "unaffected",
+              "versionType": "semver"
+            }
+          ]
+        }
+      ],
+      "problemTypes": [
+        {
+          "descriptions": [
+            {
+              "lang": "en",
+              "cweId": "CWE-918",
+              "description": "Server-Side Request Forgery (SSRF)",
+              "type": "CWE"
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH"
+          }
+        }
+      ],
+      "credits": [
+        {
+          "lang": "en",
+          "value": "Teycir",
+          "user": "00000000-0000-0000-0000-000000000000",
+          "type": "finder"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://github.com/IBM/mcp-context-forge/pull/7658",
+          "name": "Fix PR: harden outbound MCP connections in LLM Chat",
+          "tags": ["patch"]
+        },
+        {
+          "url": "https://github.com/IBM/mcp-context-forge/releases/tag/v1.1.2",
+          "name": "Release v1.1.2",
+          "tags": ["release-notes"]
+        },
+        {
+          "url": "https://github.com/Teycir/mcp-context-forge-cve",
+          "name": "Reproduction package and full report",
+          "tags": ["exploit", "third-party-advisory"]
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions/918.html",
+          "name": "CWE-918",
+          "tags": ["technical-description"]
+        }
+      ],
+      "timeline": [
+        {
+          "time": "2026-11-19T13:49:49.000Z",
+          "lang": "en",
+          "value": "Reported to IBM PSIRT (ticket ADV0400680)"
+        },
+        {
+          "time": "2026-11-23T13:03:58.000Z",
+          "lang": "en",
+          "value": "Fix committed (a1c3293b4, PR #7658)"
+        },
+        {
+          "time": "2026-11-25T09:38:04.000Z",
+          "lang": "en",
+          "value": "Fixed version 1.1.2 released"
+        }
+      ],
+      "solutions": [
+        {
+          "lang": "en",
+          "value": "Upgrade to 1.1.2 or later. The fix resolves and pins the outbound target (resolve_pinned_target plus build_pinned_httpx_client_factory with SniPinningTransport and redirects disabled), so the transport never performs a second DNS lookup."
+        }
+      ]
+    }
+  }
+}

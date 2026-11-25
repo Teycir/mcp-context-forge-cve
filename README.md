@@ -11,13 +11,13 @@ to `127.0.0.1`. The response lists the internal server's tools, and `/llmchat/ch
 | Source | `github.com/IBM/mcp-context-forge` |
 | Audited | 1.1.1, commit `85474a7c0eefc8c5d0e958400af7bc0ce59dfe63` (2026-11-17) |
 | Affected | `1.0.0-RC2` – `1.1.1` (rebinding); `0.9.0` and `1.0.0-BETA-1` – `1.0.0-RC1` (direct SSRF) |
-| Fixed in | commit `a1c3293b4` (2026-11-23), on `main` and `release/1.1.2`; not yet tagged/released |
+| Fixed in | commit `a1c3293b4` (2026-11-23), shipped in **v1.1.2** (GH release 2026-11-25T09:38:04Z; PyPI 2026-11-25T09:55:46Z) |
 | Severity | High — CVSS 3.1 **8.2** `AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N` |
 | Conservative scoring | 7.1 High with `S:U` if scope change is rejected |
 | CWE | CWE-918 (Server-Side Request Forgery) |
 | CVE | pending — submission pack in `cve-submission/`, `cna/` |
 | Reported by | Teycir ([github.com/Teycir](https://github.com/Teycir)) |
-| Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4`) on **main** and **release/1.1.2**, not yet tagged. HackerOne declined. Disclosure: bounded 30-days-after-fix proposed, outer bound 2026-12-19. |
+| Status | Vendor notified 2026-11-19T13:49:49Z; IBM PSIRT ticket **ADV0400680** opened. Fix committed 2026-11-23 (commit `a1c3293b4`, PR #7658) and **released in v1.1.2** on 2026-11-25. HackerOne declined. Disclosure: fixed and public; publish. |
 
 ## Issue
 
@@ -87,7 +87,12 @@ isolation control    BLOCKED from attacker container to 10.77.0.2:19000 and 127.
 - Message-ID: `<s8T9ua3GH9FcqhYhjnImvhnsNQUefeogz5799X90-ejFiYsAzhfGbs9h5xbpOrwOGASdSDUM3t3vIDE2XBWcHDeDnelOg-L3wdwJLqMCi_k=@protonmail.com>`
 - Sent copy: `cna/sent/20261119T134949Z-vendor-notice-psirt.eml` (sha256 `4810b310669a7eb33be499ed0ff4e211543d01f2e737d7850c619b200573dde2`)
 - Log: `cna/contact-log.md` row 1.
-- Deadline: **2026-11-26** (7 calendar days). Escalation: T+2 nudge (2026-11-21), T+4 MITRE (2026-11-23), T+7 publish.
+- Fix released: **v1.1.2**, 2026-11-25T09:38:04Z (GitHub), 2026-11-25T09:55:46Z (PyPI).
+  Release notes list PR #7658, "Apply outbound URL checks and DNS pinning to MCP connections from
+  LLM Chat". Verified in the 1.1.2 sdist (sha256 `4c7248d17ea73f6d5f5443b943aab2386f09afdffc5d8da02e5ebafb45aa213c`):
+  `mcp_client_chat_service.py:2177` calls `resolve_pinned_target()`, `:2180` builds the pinned
+  client factory.
+- Deadline: superseded by the release; publish now that v1.1.2 is public.
 
 ## Evidence
 

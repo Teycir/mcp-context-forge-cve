@@ -76,6 +76,6 @@ already do: `SecurityValidator.validate_url_for_connection_pinning()` then conne
 ## Disclosure
 
 Vendor notice sent 2026-11-19T13:49:49Z to `psirt@us.ibm.com`; PSIRT replied directing this
-submission to HackerOne. Intended publication 2026-11-26 unless a fix ships or an extension is
+submission to HackerOne. The fix shipped in v1.1.2 on 2026-11-25; publication is no longer gated.
 agreed. IBM's stated policy asks for no disclosure until a fix is public plus 30 days; that
 conflicts with the stated date and needs a decision before submitting.

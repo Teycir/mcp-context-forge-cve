@@ -30,7 +30,7 @@ IBM — mcp-context-forge (ContextForge MCP Gateway), PyPI mcp-contextforge-gate
 **Version(s) fixed**
 
 ```
-None as of 2026-11-19.
+1.1.2 (released 2026-11-25)
 ```
 
 **Description**

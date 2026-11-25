@@ -70,6 +70,6 @@ https://cwe.mitre.org/data/definitions/918.html
 ## Notes
 
 - VulDB may ask for the vendor's response. Supply the PSIRT thread and state that the vendor was
-  notified on `<date>` with no fix at submission time.
+  notified on 2026-11-19; fixed in 1.1.2 on 2026-11-25.
 - If VulDB assigns, stop. Do not file MITRE afterwards.
 - VulDB entries are public at submission time — confirm the 7-day window has elapsed.

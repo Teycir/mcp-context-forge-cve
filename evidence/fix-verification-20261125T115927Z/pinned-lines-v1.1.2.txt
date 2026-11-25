@@ -1,0 +1,3 @@
+105:from mcpgateway.utils.ssrf_pinning import build_pinned_httpx_client_factory, resolve_pinned_target
+2177:            pinned = await resolve_pinned_target(connection["url"], "MCP server URL")
+2180:        client_factory = build_pinned_httpx_client_factory(pinned)
